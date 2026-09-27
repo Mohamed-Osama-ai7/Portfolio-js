@@ -137,24 +137,22 @@ contactForm.addEventListener("submit", async function (event) {
 
     try {
 
-        const response = await fetch(
-            "http://localhost:3000/messages",
-            {
-                method: "POST",
+       const response = await fetch(
+    "https://portfolio-js-lsvp.onrender.com/messages",
+    {
+        method: "POST",
 
-                headers: {
-                    "Content-Type": "application/json"
-                },
+        headers: {
+            "Content-Type": "application/json"
+        },
 
-                body: JSON.stringify({
-                    name: name,
-                    email: email,
-                    message: message
-                })
-            }
-        );
-
-
+        body: JSON.stringify({
+            name: name,
+            email: email,
+            message: message
+        })
+    }
+);
         const data = await response.json();
 
 
