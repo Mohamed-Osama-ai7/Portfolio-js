@@ -1,4 +1,5 @@
 require("dotenv").config();
+
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -13,7 +14,6 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-
 
 // =========================
 // MONGODB CONNECTION
@@ -36,13 +36,11 @@ app.get("/", function (req, res) {
     res.send("Portfolio Backend is running");
 });
 
-
 // =========================
 // MESSAGE ROUTES
 // =========================
 
 app.use("/messages", messageRoutes);
-
 
 // =========================
 // START SERVER
